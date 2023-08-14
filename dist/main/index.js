@@ -3991,7 +3991,7 @@ async function getConfig() {
         name: core.getInput('name') || process.env['REPO_NAME'] || '',
         url: core.getInput('url') || process.env['REPO_URL'] || '',
         username: core.getInput('username') || process.env['REPO_USERNAME'] || '',
-        password: core.getInput('password') || process.env['REPO_PASSWORD'] || '',
+        password: core.getInput('password') || process.env['REPO_PASSWORD'] || ''
     };
 }
 exports.getConfig = getConfig;
@@ -4042,12 +4042,7 @@ async function run() {
             core.setFailed('url required');
             return;
         }
-        let args = [
-            'repo',
-            'add',
-            config.name,
-            config.url,
-        ];
+        const args = ['repo', 'add', config.name, config.url];
         if (config.username.length !== 0) {
             args.push('--username', config.username);
         }

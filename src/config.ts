@@ -1,5 +1,4 @@
 import * as core from '@actions/core'
-import {parseMultiInput} from '@conventional-actions/toolkit'
 
 type Config = {
   // the name of the repository to add
@@ -20,6 +19,6 @@ export async function getConfig(): Promise<Config> {
     name: core.getInput('name') || process.env['REPO_NAME'] || '',
     url: core.getInput('url') || process.env['REPO_URL'] || '',
     username: core.getInput('username') || process.env['REPO_USERNAME'] || '',
-    password: core.getInput('password') || process.env['REPO_PASSWORD'] || '',
+    password: core.getInput('password') || process.env['REPO_PASSWORD'] || ''
   }
 }

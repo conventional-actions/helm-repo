@@ -15,12 +15,7 @@ async function run(): Promise<void> {
       return
     }
 
-    let args = [
-      'repo',
-      'add',
-      config.name,
-      config.url,
-    ]
+    const args = ['repo', 'add', config.name, config.url]
 
     if (config.username.length !== 0) {
       args.push('--username', config.username)
