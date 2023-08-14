@@ -1,0 +1,20 @@
+name: 'helm-repo'
+description: 'Run helm-repo'
+author: 'Conventional Actions'
+inputs:
+  name:
+    required: true
+    description: 'the name of the repository to add'
+  url:
+    required: true
+    description: 'the URL of the repository to add'
+  username:
+    description: 'the username of the user to authenticate to the repository'
+  password:
+    description: 'the password of the user to authenticate to the repository'
+runs:
+  using: 'node16'
+  main: 'dist/main/index.js'
+branding:
+  icon: shopping-cart
+  color: purple
