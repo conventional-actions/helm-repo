@@ -13,7 +13,7 @@ inputs:
   password:
     description: 'the password of the user to authenticate to the repository'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/main/index.js'
 branding:
   icon: shopping-cart
