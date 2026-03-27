@@ -13,8 +13,8 @@ inputs:
   password:
     description: 'the password of the user to authenticate to the repository'
 runs:
-  using: 'node20'
-  main: 'dist/main/index.js'
+  using: 'node24'
+  main: 'dist/index.cjs'
 branding:
   icon: shopping-cart
   color: purple
